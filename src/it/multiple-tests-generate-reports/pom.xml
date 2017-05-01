@@ -34,6 +34,28 @@
                 <artifactId>@project.artifactId@</artifactId>
                 <version>@project.version@</version>
                 <configuration>
+                    <!--TODO Remove this extra configuration when 3.2 is out-->
+                    <jmeterVersion>3.2-SNAPSHOT</jmeterVersion>
+                    <jmeterArtifacts>
+                        <artifact>org.apache.jmeter:ApacheJMeter:3.2-SNAPSHOT</artifact>
+                        <artifact>org.apache.jmeter:ApacheJMeter_components:3.2-SNAPSHOT</artifact>
+                        <artifact>org.apache.jmeter:ApacheJMeter_config:3.2-SNAPSHOT</artifact>
+                        <artifact>org.apache.jmeter:ApacheJMeter_core:3.2-SNAPSHOT</artifact>
+                        <artifact>org.apache.jmeter:ApacheJMeter_ftp:3.2-SNAPSHOT</artifact>
+                        <artifact>org.apache.jmeter:ApacheJMeter_functions:3.2-SNAPSHOT</artifact>
+                        <artifact>org.apache.jmeter:ApacheJMeter_http:3.2-SNAPSHOT</artifact>
+                        <artifact>org.apache.jmeter:ApacheJMeter_java:3.2-SNAPSHOT</artifact>
+                        <artifact>org.apache.jmeter:ApacheJMeter_jdbc:3.2-SNAPSHOT</artifact>
+                        <artifact>org.apache.jmeter:ApacheJMeter_jms:3.2-SNAPSHOT</artifact>
+                        <artifact>org.apache.jmeter:ApacheJMeter_junit:3.2-SNAPSHOT</artifact>
+                        <artifact>org.apache.jmeter:ApacheJMeter_ldap:3.2-SNAPSHOT</artifact>
+                        <artifact>org.apache.jmeter:ApacheJMeter_mail:3.2-SNAPSHOT</artifact>
+                        <artifact>org.apache.jmeter:ApacheJMeter_mongodb:3.2-SNAPSHOT</artifact>
+                        <artifact>org.apache.jmeter:ApacheJMeter_native:3.2-SNAPSHOT</artifact>
+                        <artifact>org.apache.jmeter:ApacheJMeter_slf4j_logkit:3.2-SNAPSHOT</artifact>
+                        <artifact>org.apache.jmeter:ApacheJMeter_tcp:3.2-SNAPSHOT</artifact>
+                        <artifact>org.apache.jmeter:jorphan:3.2-SNAPSHOT</artifact>
+                    </jmeterArtifacts>
                     <suppressJMeterOutput>false</suppressJMeterOutput>
                     <testFilesIncluded>
                         <testFilesIncluded>**/*.jmx</testFilesIncluded>

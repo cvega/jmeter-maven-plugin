@@ -63,6 +63,14 @@ public class TestConfig {
 		return JsonPath.read(jsonData, "$.resultsOutputIsCSVFormat");
 	}
 
+	public void setGenerateReports(boolean generateReports) {
+		jsonData = JsonPath.parse(jsonData).set("$.generateReports", generateReports).jsonString();
+	}
+
+	public boolean getGenerateReports() {
+		return JsonPath.read(jsonData, "$.generateReports");
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
@@ -72,4 +80,5 @@ public class TestConfig {
 
 		return jsonData != null ? jsonData.equals(that.jsonData) : that.jsonData == null;
 	}
+
 }

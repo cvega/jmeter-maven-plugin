@@ -151,6 +151,12 @@ public class ConfigureJMeterMojo extends AbstractJMeterMojo {
 	protected boolean downloadLibraryDependencies;
 
 	/**
+	 * Generate Jmeter Reports (this will force your .jtl's into .csv mmode)
+	 */
+	@Parameter(defaultValue = "false")
+	protected boolean generateReports;
+
+	/**
 	 * A list of artifacts that should be copied into the lib/junit directory e.g.
 	 * <p/>
 	 * &lt;junitLibraries&gt;
@@ -314,6 +320,7 @@ public class ConfigureJMeterMojo extends AbstractJMeterMojo {
 		InputStream configFile = this.getClass().getResourceAsStream(baseConfigFile);
 		TestConfig testConfig = new TestConfig(configFile);
 		testConfig.setResultsOutputIsCSVFormat(resultsOutputIsCSVFormat);
+		testConfig.setGenerateReports(generateReports);
 		testConfig.writeResultFilesConfigTo(testConfigFile);
 	}
 

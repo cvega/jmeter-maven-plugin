@@ -45,9 +45,9 @@ public class CheckResultsMojo extends AbstractJMeterMojo {
 	 */
 	@Override
 	public void doExecute() throws MojoExecutionException, MojoFailureException {
+		TestConfig testConfig = new TestConfig(new File(testConfigFile));
 		if (scanResultsForSuccessfulRequests || scanResultsForFailedRequests) {
 			ResultScanner resultScanner = new ResultScanner(scanResultsForSuccessfulRequests, scanResultsForFailedRequests);
-			TestConfig testConfig = new TestConfig(new File(testConfigFile));
 			for (String resultFileLocation : testConfig.getResultsFileLocations()) {
 				resultScanner.parseResultFile(new File(resultFileLocation));
 			}
@@ -60,6 +60,10 @@ public class CheckResultsMojo extends AbstractJMeterMojo {
 			getLog().info(" ");
 			if (!ignoreResultFailures && resultScanner.getFailureCount() > 0) {
 				throw new MojoFailureException("Failing build because failed requests have been detected.  JMeter logs are available at: '" + logsDirectory.getAbsolutePath() + "'");
+			}
+		} else if (testConfig.getGenerateReports()) {
+			for (String resultFileLocation : testConfig.getResultsFileLocations()) {
+				//TODO generate individual report
 			}
 		} else {
 			getLog().info(" ");

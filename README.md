@@ -7,6 +7,10 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.lazerycode.jmeter/jmeter-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.lazerycode.jmeter/jmeter-maven-plugin)
 [![Javadoc](https://javadoc-emblem.rhcloud.com/doc/com.lazerycode.jmeter/jmeter-maven-plugin/badge.svg)](http://www.javadoc.io/doc/com.lazerycode.jmeter/jmeter-maven-plugin)
 
+
+[![Ready](https://img.shields.io/waffle/label/jmeter-maven-plugin/jmeter-maven-plugin/ready.svg?label=Tickets%20Ready%20For%20Dev&colorB=32CD32)](http://waffle.io/jmeter-maven-plugin/jmeter-maven-plugin)
+[![In Progress](https://img.shields.io/waffle/label/jmeter-maven-plugin/jmeter-maven-plugin/in%20progress.svg?label=Tickets%20In%20Progress&colorB=32CD32)](http://waffle.io/jmeter-maven-plugin/jmeter-maven-plugin)
+
 A Maven plugin that provides the ability to run JMeter tests as part of your build
 
 See the [CHANGELOG](https://github.com/jmeter-maven-plugin/jmeter-maven-plugin/blob/master/CHANGELOG.md) for change information.  
